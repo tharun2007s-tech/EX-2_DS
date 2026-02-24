@@ -24,14 +24,14 @@ STEP 8: Use heatmap method of representation to show relationships between two v
 
 ## CODING
 ```
-### Step 1 : Import required packages
+Step 1 : Import required packages
 
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-### Step 2 : Load the Dataset
+Step 2 : Load the Dataset
 
 data = pd.read_csv("titanic_dataset.csv")
 print("\nDataset Loaded Successfully\n")
@@ -40,7 +40,7 @@ print("\nDataset Info:\n")
 print(data.info())
 print(data.describe())
 
-### Step 3 : Data cleansing - Handling missing values
+Step 3 : Data cleansing - Handling missing values
 
 for column in data.columns:
     if pd.api.types.is_numeric_dtype(data[column]):
@@ -49,7 +49,7 @@ for column in data.columns:
         data[column] = data[column].fillna(data[column].mode()[0])
 print("\nMissing values handled successfully.\n")
 
-### Step 4 : Box plot to analyse outliers (Age & Fare)
+Step 4 : Box plot to analyse outliers (Age & Fare)
 
 plt.figure(figsize=(6,4))
 sns.boxplot(x=data["Age"])
@@ -61,7 +61,7 @@ sns.boxplot(x=data["Fare"])
 plt.title("Boxplot - Fare")
 plt.show()
 
-### Step 5 : Remove outliers using IQR method
+Step 5 : Remove outliers using IQR method
 
 def remove_outliers_iqr(df, column):
     Q1 = df[column].quantile(0.25)
@@ -76,7 +76,7 @@ data = remove_outliers_iqr(data, "Fare")
 
 print("Outliers removed using IQR method.\n")
 
-### Step 6 : Countplot for categorical data
+Step 6 : Countplot for categorical data
 
 plt.figure(figsize=(6,4))
 sns.countplot(x="Survived", data=data)
@@ -93,7 +93,7 @@ sns.countplot(x="Pclass", data=data)
 plt.title("Countplot - Passenger Class Distribution")
 plt.show()
 
-### Step 7 : Displot for univariate 
+Step 7 : Displot for univariate 
 
 sns.displot(data["Age"], kde=True, height=4, aspect=1.5)
 plt.title("Displot - Age Distribution")
@@ -103,7 +103,7 @@ sns.displot(data["Fare"], kde=True, height=4, aspect=1.5)
 plt.title("Displot - Fare Distribution")
 plt.show()
 
-### Step 8 : Cross tabulation
+Step 8 : Cross tabulation
 
 print("\nCross Tabulation: Sex vs Survived\n")
 print(pd.crosstab(data["Sex"], data["Survived"]))
@@ -111,7 +111,7 @@ print(pd.crosstab(data["Sex"], data["Survived"]))
 print("\nCross Tabulation: Pclass vs Survived\n")
 print(pd.crosstab(data["Pclass"], data["Survived"]))
 
-###  Step 9 : Heatmap for Correlation analysis
+Step 9 : Heatmap for Correlation analysis
 
 plt.figure(figsize=(8,6))
 correlation_matrix = data.select_dtypes(include=np.number).corr()
