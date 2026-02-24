@@ -123,9 +123,6 @@ plt.show()
 
 ## OUTPUT
 
-<img width="1038" height="509" alt="Screenshot 2026-02-21 102428" src="https://github.com/user-attachments/assets/21da6485-886b-416b-93b1-3a904b3ac1f1" />
-<img width="1784" height="762" alt="Screenshot 2026-02-24 151542" src="https://github.com/user-attachments/assets/b72f36d2-67b7-4e75-a7f2-3a27ffab817a" />
-<img width="1051" height="781" alt="Screenshot 2026-02-24 154457" src="https://github.com/user-attachments/assets/1df62c59-35c0-436b-9abf-8916d715665d" />
 <img width="1037" height="361" alt="Screenshot 2026-02-24 160325" src="https://github.com/user-attachments/assets/d68ab579-1360-4ea8-ac67-7c35330d43f7" />
 <img width="949" height="831" alt="Screenshot 2026-02-24 160415" src="https://github.com/user-attachments/assets/8e805d2a-fa8c-4933-9600-821c3775ee9b" />
 <img width="802" height="210" alt="Screenshot 2026-02-24 160424" src="https://github.com/user-attachments/assets/a005cc04-ba54-49a1-91c3-1fd516940601" />
